@@ -1,0 +1,57 @@
+//styles.scss 
+
+//Existing CSS styles 
+body {
+font-family: 'Arial', sans-serif;
+background-colour: #f0f0f0;
+color: #333;
+}
+
+h1 {
+text-align: center;
+color: #007bff;
+}
+
+p {
+line-height: 1.5;
+}
+
+#main-content {
+padding: 20px;
+}
+
+.highlight-text {
+font-weight: bold;
+color: #e44d26;
+}
+
+//SCSS features
+$main-color: #007bff;
+%highlight-text{
+font-weight: bold;
+color: #e44d26;
+}
+
+.card{
+border: 2px solid $main-color;
+}
+
+a{
+color: white;
+text-decoration: none;
+}
+
+.card-title{
+@extend %highlight-text;
+}
+
+@media only screen and (max-width: 767px) {
+body {
+font-size: 14px;
+}
+
+h1 {
+font-size: 24px;
+}
+
+}
